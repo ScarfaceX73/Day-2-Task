@@ -1,0 +1,96 @@
+List 5 difference between Browser JS(console) v Nodejs.
+
+
+Browser JS has "window" as a predefined global object which functions and attributes, while Node doesn't have a
+predefined "window" object cause it doesn't have a window to draw anything. Not just "window" object, Node doesn't
+have "document" object as well, cause it never have to render anything of sort in a page. While Browser JS has 
+"document" which is also another predefined global variable. Just because Node doesn't have "window" or "document"
+doesn't mean it doesn't have any global variable, "global" which is a predefined global object. It has so many 
+function which are not available in browsers, as they are only needed for server side works only.
+
+Browsers have another predefined object which is "location" is related to particular "url" which is page specific,
+that has all the information about the url we have loaded. But Node doesn't require that. Node has "require" object
+which is a predefined and is used to include modules in the app. Whilw don't have "require". Module is everything 
+in Node JS, you must keep your code inside a module. But moduling is mandatory in client side javascript which is
+the browser.
+
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+
+watch & summary 5 points - https://www.youtube.com/watch?v=SmE4OwHztCc&ab_channel=JSConf.
+
+
+1. The components that make up a browsers are the binding, rendering, platform, Javascript virtual machine.
+   So the binding is nothing but a lot of operating system related things, so when it interacts with the network,
+   it will use certain APIs depending on the operating system. Then the rendering is all about the construction of
+   a website using HTML and parsing, layout, structuring everything comes under rendering. So platforms, just like
+   how it sounds about the things that dependent on OS like windows, mac, etc... there different things between the
+   operating systems. Then the there is javascript virtual machine.
+
+2. So we look at the high level flow, it has two processes one is HTML parsing and another is CSS parsing. So after
+   both combined it becomes a render tree which after that leads to layout, then design and graphics related things
+   like the visual outputs. Parsing HTML is easy as HTML do speculative parsing as such even if you miss an ending
+   tag or make a mistake, the HTML will speculate and parse the code. But its not always rectifies and parse.
+
+3. The parsing flow, there is tokenisation which takes the text and returns it into tokens which will then create 
+   the parse tree and then DOM tree. So the DOM tree that where you interact with javascript in the page. So in 
+   certain situation like "<script>,<link>,<style>" where the HTML parsing will pause and then fetch it for the 
+   network and then it will excute. It might be bit slow.
+
+4. Render tree is actually multiple tree, there are four different tree and they are RenderObject, RenderStyles,
+   RenderLayers, Line boxes. So the render objecct is the like node itself, it refer to the DOM node. Render styles
+   is something that applies styles to the DOM element. render layers positions everything the right place. Then 
+   the line box, it wraps the texts based on the font size, like the constraints of what's inside as such.
+
+5. Inline critical CSS where the most important bits of the site and inlining the CSS in a style tag inside the HTML
+   element. Then there is delta last bitmap is into performance where youy can compare last paint to the next paint,
+   so it draws efficiently.
+   
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+
+
+Execute the below code and write your description in txt file.
+
+
+"typeof()" is a javascript Javascript which used to find the type of the operand in string form.
+
+a. typeof(1) //output: 'number'
+   
+   The output is number because the input is a number.
+
+b. typeof(1.1) //output: 'number'
+
+   The output is number because the input is a number evn if it is in decimal form it still considered as a number.
+
+c. typeof('1.1') //output: 'string'
+
+   The output is string because the even if the input is a number if its inside a single or a double quote its 
+   considered as a string as such the output is string.
+
+d. typeof(true) //output: 'boolean'
+
+   The output is boolean because "true" or "false" data is boolean data type.
+
+e. typeof(null) //output: 'object'
+
+   the output is object because even if the input is null it is still consider as an object.
+
+f. typeof(undefined) //output: 'undefined'
+
+   The output is undefined because undefined undefined is a type of data.
+
+g. typeof([]) //output: 'object'
+ 
+   The output is object because even if its an array, an array is still considered as an object. use Array.isArray
+   or Object.prototype.toString.callto differentiate regular objects from arrays.
+
+h. typeof({}) //output: 'object'
+
+   The output is object because the input is curly braces which specifies an object.
+
+i. typeof(NaN) //output: 'number'
+
+   The output is number despite the input being not-a-number is because NaN is actually technically a 
+   numeric data type. But the value cannot be represented using actual numbers.
